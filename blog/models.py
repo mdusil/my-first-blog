@@ -10,6 +10,8 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+#MDU 26.12.2017
+    on_delete = models.DO_NOTHING
 
     def publish(self):
         self.published_date = timezone.now()
